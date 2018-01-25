@@ -1,1 +1,1 @@
-# 预览地址  http://supermap.group/huawei/UrbanIOC/index.html
+# 预览地址  http://supermap.group/huaweibigscreen/UrbanIOC/index.html
