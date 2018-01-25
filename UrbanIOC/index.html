@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="Intelligent Operation Center">
+    <meta name="author" content="GaoJie ESRI China @ 2016">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Intelligent Operation Center</title>
+    <!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap-3.3.4/css/bootstrap.css" rel="stylesheet">
+    <!-- font-awesome CSS -->
+    <link href="libs/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- animate CSS -->
+    <link href="libs/animate/animate.min.css" rel="stylesheet">
+    <!-- weather CSS -->
+    <link href="libs/weather/screen.css"  rel="stylesheet">
+    <!-- <link rel="stylesheet" href="libs/xenon/css/xenon.css" type="text/css"> -->
+    <!-- scrollbar CSS -->
+    <link href="libs/scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <!-- arcgis CSS -->
+    <link href="https://js.arcgis.com/4.0/dijit/themes/claro/claro.css" rel="stylesheet"/>
+    <link href="https://js.arcgis.com/4.0/esri/css/main.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/component.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+   <!--  [if lt IE 9]>
+    <script src="libs/html5shiv.min.js"></script>
+    <script src="libs/respond.min.js"></script>
+    <![endif]
+</head>
+<body>
+<!-- NAVBAR================================================== -->
+	<nav class="navbar navbar-glass navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					<img alt="logo" src="images/logo.png">
+					<div class="navbar-title">
+						<span class="navbar-brand-text">智慧城市综合运营管理中心</span>
+						<span class="navbar-brand-subtext">Smart City Integrated Operations & Management Center</span>
+					</div>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="date-line">
+						<div class="navbar-title">
+							<span class="navbar-brand-subtext" id="date"></span>
+							<span class="navbar-brand-text" id="clock"></span>
+						</div>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right" id="exit">
+					<li id="weather">
+					</li>
+					<!-- <li>
+						<div id="line">
+						</div>				
+					</li> -->
+					<li id="TOC">
+					</li>
+					<!-- 按钮的分割线 -->
+					<!-- <li>
+						<div id="line">
+						</div>				
+					</li> -->
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</nav>
+	<!-- NAVBAR================================================== -->
+
+<!-- MAIN CONTAIN================================================== -->
+	<div class="main-container">
+		<div id="map"></div>
+		<div id="leftBar" class="sideBar left opacity0">
+			<div class="bar-content" id="leftContent">
+			</div>
+			<span id="leftClickSpan" class="glyphicon glyphicon-option-vertical opration-handler" aria-hidden="true"></span>
+		</div>
+		
+		<div id="RightBar" class="sideBar right opacity0">			
+			<span id="rightClickSpan" class="glyphicon glyphicon-option-vertical opration-handler" aria-hidden="true"></span>
+			<div class="bar-content" id="rightContent">			
+			</div>
+		</div>
+		
+		<div id="BottomBar" class="bottomBar opacity0">
+			<span id="bottomClickSpan" class="glyphicon glyphicon-option-horizontal opration-handler" aria-hidden="true"></span>
+			<div class="bar-content-bottom" id="bottomContent">
+			</div>
+		</div>
+	</div>
+	<!-- MAIN CONTAIN================================================== -->
+
+	<!-- FOOTER================================================== -->
+	<footer class="footer"></footer>
+	<!-- FOOTER================================================== -->
+
+	<!-- PAGEOVERLAY================================================== -->
+	<div class="page-overlay"></div>
+	<!-- PAGEOVERLAY================================================== -->
+
+	<!-- MAIN CORE JAVASCRIPT================================================== -->
+	<script src="libs/jquery-1.11.3.min.js"></script>
+	<script src="libs/AnimatedLetters/segment.min.js"></script>
+	<script src="libs/AnimatedLetters/d3-ease.v0.6.js"></script>
+	<script src="libs/AnimatedLetters/letters.js"></script>
+	<script src="libs/echarts.min.js"></script>
+	<script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="config/dojoConfig.js"></script>
+	<script src="config/config.js"></script>
+	<script src="libs/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+	<script src="libs/xenon/js/joinable.js"></script>
+	<script src="libs/devexpress-web-14.1/js/globalize.min.js"></script>
+	<script src="libs/devexpress-web-14.1/js/dx.chartjs.js"></script>
+	<script src="libs/vTicker.min.js"></script>
+	<!-- <script type="text/javascript" src="js/widgets/layerList.js"></script> -->
+	<script src="https://js.arcgis.com/4.0/init.js"></script>
+
+	<script type="text/javascript">
+		require(["application/main"], function(main) {
+			window.main = new main(configOptions);						
+		});
+	</script>
+	<!-- MAIN CORE JAVASCRIPT================================================== -->
+</body>
+</html>
